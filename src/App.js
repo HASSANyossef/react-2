@@ -1,25 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ProductsList from './ProductsList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component
+{
+  state = {
+    // name: "hassan",
+    // age: 28,
+    // job: "engineer",
+    // hubs: [
+    //   {
+    //     foot: "eredc",
+    //     ddf: "ddsa",
+    //   },
+    //   {
+    //     foot: "w33w",
+    //     eddcc: "ffffff",
+    //   }
+    // ],
+    products: [
+      {
+        title: "BMW",
+        id: 10,
+        price: 50000,
+      },
+      {
+        title: "TYOTA",
+        id: 15,
+        price: 30000,
+      },
+      {
+        title: "KIA",
+        id: 20,
+        price: 40000,
+      }
+    ]
+  }
+
+
+  render()
+  {
+    return (
+      <div>
+        <ProductsList product ={this.state.products } />
+
+{/* 
+        <h2>{this.state.age}{this.state.name}</h2>  
+        <p>{ this.state.hubs.foot}</p>
+        {this.state.hubs.map((p) =>
+        {
+        return (
+          <p>{ p.foot}</p>
+        )
+        }
+        )} */}
+      </div>
+    )
+  }
 }
+
+// function App() {
+  
+// }
 
 export default App;
