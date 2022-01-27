@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import Product from "./Product";
-// import Product from "./Product";
 
 class ProductsList extends Component
 {
-    render() {
+    render()
+    {
+        const {product}= this.props
         return (
             <div>
-                {this.props.product.map((p) =>
+                {product.map((p) =>
                 {
                     return (
                         // <div>
@@ -16,7 +17,8 @@ class ProductsList extends Component
                         // <h6>{p.price }</h6>
                         // <span>{ p.id }</span>
                         // </div>
-                        <Product title={ p.title} price={ p.price} id={ p.id} />
+                        // <Product title={ p.title} price={ p.price} id={ p.id} />
+                        <Product item={p} />
                     )
                 })}
             </div>

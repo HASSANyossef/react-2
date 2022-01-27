@@ -2,12 +2,15 @@ import React, { Component } from "react";
 
 class Product extends Component
 {
-    render() {
+    
+    render()
+    {
+        const {item} = this.props;
         return (
             <div>
-                <h3>{this.props.title}</h3>
-                <h4>{this.props.price }</h4>
-                <span>{this.props.id }</span>
+                <h3>{item.title}</h3>
+                <h4>{item.price }</h4>
+                <span>{item.id }</span>
             </div>
         )
     }
